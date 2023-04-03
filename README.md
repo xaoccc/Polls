@@ -1,0 +1,2 @@
+# djangotestproject
+A test project
