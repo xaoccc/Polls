@@ -6,16 +6,19 @@ A test project for building small app using Django and React
 `pip install -r requirements.txt`  
 `django-admin startproject backend`  
 `python manage.py startapp api`  
-
 - setup settings.py
-
 ## Create Create User serializer
 ## Create Create User view
 - Use class-based views, using the generic views of Django REST Framework
-## Setup urls
+## Setup main urls
 ## Make migrations and migrate
 `python manage.py makemigrations`  
 `python manage.py migrate`  
 - Make sure the db settings in settings.py is correct!
 ## Run backend server
 `python manage.py runserver`
+- Test API and tokens on the urls we've set
+## Create Task Model
+## Add NoteSerializer to serializers
+## Add views for creating and deleting notes
+## Add tasks urls
