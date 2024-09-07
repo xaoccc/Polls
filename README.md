@@ -46,12 +46,11 @@ if errormessage, then run :
     - in src: constants.jsx, api.jsx
     - in frontend: .env
 - update constants.jsx so we can have keys to access our tokens stores in the local storage
-
 ### Setup axios
 - update api.js
 - update .env
-
 ### Write Protected Routes
 - create ProtectedRoutes.jsx
 ### Create Navigation and Pages
 - create Login.jsx, Register.jsx, Home.jsx, NotFound.jsx
+### Create a Generic Form
