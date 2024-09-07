@@ -1,7 +1,7 @@
 from django.urls import path, include
-from .views import CreateNoteView, NoteDelete
+from .views import NoteListCreate, NoteDelete
 
 urlpatterns = [ 
-    path('notes/', CreateNoteView.as_view(), name='note-list'),
-    path('notes/delete/<int:pk>', NoteDelete.as_view(), name='delete-note'),
+    path('notes/', NoteListCreate.as_view(), name='note-list'),
+    path('notes/delete/<int:pk>/', NoteDelete.as_view(), name='delete-note'),
 ]

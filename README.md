@@ -54,3 +54,9 @@ if errormessage, then run :
 ### Create Navigation and Pages
 - create Login.jsx, Register.jsx, Home.jsx, NotFound.jsx
 ### Create a Generic Form
+- create Form.jsx
+- test if the form is working
+### Notes CRUD logic
+- update Home.jsx
+### Create Note component
+
