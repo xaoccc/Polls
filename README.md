@@ -45,6 +45,7 @@ if errormessage, then run :
 - create files: 
     - in src: constants.jsx, api.jsx
     - in frontend: .env
+- in .env file add the root api url to VITE_API_URL=...
 - update constants.jsx so we can have keys to access our tokens stores in the local storage
 ### Setup axios
 - update api.js

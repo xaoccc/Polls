@@ -8,6 +8,7 @@ from .models import Note
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
+    print(queryset)
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
 

@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './pages/NotFound'
 
@@ -21,16 +23,20 @@ function RegisterAndLogout() {
 function App() {
 
   return (
+
     <BrowserRouter>
+      <Header />
       <Routes>
         {/* Wrap ProtectedRoute around each component meant for only logged in users */}
-        <Route path="/" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />
+        <Route path="/" element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
+
 
 
   )

@@ -54,12 +54,12 @@ export default function Home() {
 
   return (
     <div>
-      <div class="all-notes">
+      <div className="all-notes">
         <h2>Notes</h2>
         { notes.map((note) => <Note key={note.id} note={note} onDelete={deleteNote} />)}
 
       </div>
-      <h2 class="create-note-heading">Create Note</h2>
+      <h2 className="create-note-heading">Create Note</h2>
       <form onSubmit={createNote}>
         <label htmlFor="title">Title:</label>
         <br />
