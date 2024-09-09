@@ -1,8 +1,25 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
 
 
 export default function Header() {
+    const [access, setAccess] = useState(localStorage.getItem('access') || '');
 
+    useEffect(() => {
+        const handleStorageChange = () => {
+            setAccess(localStorage.getItem('access'));
+        };
+
+        // Listen for storage changes
+        window.addEventListener('storage', handleStorageChange);
+
+        // Clean up event listener on component unmount
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
+    console.log(access);
 
 
     return (
@@ -11,7 +28,7 @@ export default function Header() {
                 <div className="container-fluid">
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {( localStorage.getItem('access')) ? 
+                            {(access) ? 
                             <>
                                 <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to='/'>Home</Link>

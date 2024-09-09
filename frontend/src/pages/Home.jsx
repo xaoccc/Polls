@@ -17,7 +17,6 @@ export default function Home() {
     api.get("/api/notes/")
       .then((response) => {
         setNotes(response.data);
-        console.log(response.data);
       })
       .catch((error) => console.error(`Error: ${error}`));;
   }

@@ -61,3 +61,5 @@ if errormessage, then run :
 - update Home.jsx
 ### Create Note component
 
+Header is not updating when the user is logged in/out. Tried with useEffect, useState, useContext, no result.
+
