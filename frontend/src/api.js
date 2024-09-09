@@ -1,8 +1,11 @@
 import axios from 'axios'
 import { ACCESS_TOKEN } from './constants'
 
+// Only for deployment in choreo
+const apiUrl = '/choreo-apis/notes/backend/v1'
+
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
+    baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
 })
 
 api.interceptors.request.use(
