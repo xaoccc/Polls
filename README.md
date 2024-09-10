@@ -13,6 +13,7 @@ if errormessage, then run :
 `django-admin startproject backend`  
 `python manage.py startapp api`  
 - setup settings.py
+- create .env for the backend. There will be stored the db credentials for PostgreSQL.
 ### Create Create User serializer
 ### Create Create User view
 - Use class-based views, using the generic views of Django REST Framework
@@ -45,11 +46,10 @@ if errormessage, then run :
 - create files: 
     - in src: constants.jsx, api.jsx
     - in frontend: .env
-- in .env file add the root api url to VITE_API_URL=...
 - update constants.jsx so we can have keys to access our tokens stores in the local storage
 ### Setup axios
 - update api.js
-- update .env
+- update .env: in .env file add the root api url to VITE_API_URL=...
 ### Write Protected Routes
 - create ProtectedRoutes.jsx
 ### Create Navigation and Pages
@@ -62,8 +62,7 @@ if errormessage, then run :
 ### Create Note component
 
 Bugs to fix:
-Header is not updating when the user is logged in/out. Tried with useEffect, useState, useContext, no result.
-Backend for Note model is not working: server error 500
+Header is not updating when the user is logged in/out.
 
 Important notes:
 - Database is shutting down every hour, so when testing the project, first restart it. It takes about 5 minutes.

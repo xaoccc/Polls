@@ -31,8 +31,11 @@ export default function Home() {
           console.log("Note was not deleted!");
         }
       })
-      .catch((error) => console.error(`Error: ${error}`));
-    
+      .catch((error) => console.error(`Error: ${error}`));    
+  }
+
+  const editNote = async (id) => {
+    console.log("Edit note ");  
   }
 
   const createNote = async (e) => {
@@ -55,7 +58,7 @@ export default function Home() {
     <div>
       <div className="all-notes">
         <h2>Notes</h2>
-        { notes.map((note) => <Note key={note.id} note={note} onDelete={deleteNote} />)}
+        { notes.map((note) => <Note key={note.id} note={note} onDelete={deleteNote} onEdit={editNote} />)}
 
       </div>
       <h2 className="create-note-heading">Create Note</h2>

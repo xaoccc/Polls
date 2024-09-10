@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
 import Header from './components/Header'
+import HeaderNoUser from './components/HeaderNoUser'
 import Footer from './components/Footer'
 import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './pages/NotFound'
@@ -25,14 +26,13 @@ function App() {
 
   return (
 
-    <BrowserRouter>
-      <Header />
+    <BrowserRouter>      
       <Routes>
         {/* Wrap ProtectedRoute around each component meant for only logged in users */}
-        <Route path="/" element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<RegisterAndLogout />} />
-        <Route path="/logout" element={<Logout />} />
+        <Route path="/" element={<ProtectedRoute> <Header /> <Home /> </ProtectedRoute>} />
+        <Route path="/login" element={<><HeaderNoUser /> <Login /></>} />
+        <Route path="/register" element={<><HeaderNoUser /> <RegisterAndLogout /></>} />
+        <Route path="/logout" element={<><HeaderNoUser /><Logout /></>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

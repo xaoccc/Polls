@@ -8,14 +8,13 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
+                                <Link className="nav-link" to='/login'>Login</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/logout">Logout</Link>
+                                <Link className="nav-link" to="/register">Register</Link>
                             </li>
                         </ul>
                     </div>
-                    <h5>Welcome, {localStorage.getItem('username')}!</h5>
                 </div>
             </nav>
         </header>

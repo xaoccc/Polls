@@ -22,9 +22,9 @@ export default function Form({ route, method }) {
             if (method === 'login') {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+                localStorage.setItem('username', username);
                 navigate('/');
             } else {
-                alert('User created successfully! Please login to continue.');
                 navigate('/login');
             }
             
@@ -53,11 +53,7 @@ export default function Form({ route, method }) {
                 placeholder="Password"
             />
             { loading && <LoadingIndicator loading={loading} /> }
-            <button
-                type="submit"
-                className="form-button">
-                    {name}
-                </button>
+            <button type="submit" className="form-button"> {name} </button>
         </form>
     );
 }
