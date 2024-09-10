@@ -61,5 +61,11 @@ if errormessage, then run :
 - update Home.jsx
 ### Create Note component
 
+Bugs to fix:
 Header is not updating when the user is logged in/out. Tried with useEffect, useState, useContext, no result.
+Backend for Note model is not working: server error 500
+
+Important notes:
+- Database is shutting down every hour, so when testing the project, first restart it. It takes about 5 minutes.
+- On every project update, build and deploy before testing on choreo
 

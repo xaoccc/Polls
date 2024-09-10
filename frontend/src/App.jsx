@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './pages/NotFound'
 
 
+
 function Logout() {
   localStorage.clear();
   return <Navigate to="/login" />
