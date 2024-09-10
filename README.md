@@ -61,8 +61,6 @@ if errormessage, then run :
 - update Home.jsx
 ### Create Note component
 
-Bugs to fix:
-Header is not updating when the user is logged in/out.
 
 Important notes:
 - Database is shutting down every hour, so when testing the project, first restart it. It takes about 5 minutes.
