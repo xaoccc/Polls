@@ -5,6 +5,8 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import Header from './components/Header'
 import HeaderNoUser from './components/HeaderNoUser'
+import CreateNoteForm from "./components/CreateNoteForm";
+import EditNoteForm from "./components/EditNoteForm";
 import Footer from './components/Footer'
 import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './pages/NotFound'
@@ -25,11 +27,14 @@ function RegisterAndLogout() {
 function App() {
 
   return (
-
-    <BrowserRouter>      
+    
+    <BrowserRouter>
+           
       <Routes>
         {/* Wrap ProtectedRoute around each component meant for only logged in users */}
-        <Route path="/" element={<ProtectedRoute> <Header /> <Home /> </ProtectedRoute>} />
+        <Route path="/" element={<ProtectedRoute> <Header />  <Home /> </ProtectedRoute>} />
+        <Route path="/create-note" element={<ProtectedRoute> <Header />  <CreateNoteForm /> </ProtectedRoute>} />
+        <Route path="/edit-note/:note_id" element={<ProtectedRoute> <Header />  <EditNoteForm /> </ProtectedRoute>} />
         <Route path="/login" element={<><HeaderNoUser /> <Login /></>} />
         <Route path="/register" element={<><HeaderNoUser /> <RegisterAndLogout /></>} />
         <Route path="/logout" element={<><HeaderNoUser /><Logout /></>} />

@@ -23,6 +23,7 @@ export default function Form({ route, method }) {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
                 localStorage.setItem('username', username);
+                localStorage.setItem('login', true);
                 navigate('/');
             } else {
                 navigate('/login');
