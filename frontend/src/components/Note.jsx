@@ -1,8 +1,6 @@
 import React from "react"
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../public/styles/note.css"
-
-
 
 export default function Note({note, onDelete}) {
 
@@ -14,8 +12,7 @@ export default function Note({note, onDelete}) {
             <p className="note-content">{note.content}</p>
             <p className="note-date">{formattedDate}</p>
             <button className="delete-button" onClick={() => onDelete(note.id)}>Delete</button>
-            <Link to={`/edit-note/${note.id}`} className="edit-button">Edit</Link>
-            <Link to={`/edit-note/${note.id}`} className="edit-button">Edit</Link>
+            <button  className="edit-button" onClick={() => nav(`/edit-note/${note.id}`, { state: { note } })} >Edit</button>
         </div>
     )
 }

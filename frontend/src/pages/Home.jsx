@@ -41,7 +41,7 @@ export default function Home() {
         { notes.map((note) => <Note key={note.id} note={note} onDelete={deleteNote} />)}
 
       </div>
-      <Link to='/create-note'>Create Note</Link>
+      <Link className="create-note-button" to='/create-note'>Create Note</Link>
       
 
     </div>

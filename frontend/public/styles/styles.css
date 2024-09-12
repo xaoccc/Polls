@@ -13,11 +13,6 @@ header, footer {
     background-color: #eee;
 }
 
-/* main {
-    padding: 2rem;
-    text-align: center;
-} */
-
 nav,
 ul {
     display: flex;
