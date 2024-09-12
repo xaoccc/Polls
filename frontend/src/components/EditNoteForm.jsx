@@ -10,12 +10,18 @@ export default function CreateNoteForm() {
 
     const { note_id } = useParams();
 
+    const updatedNote = {
+        title: title,  
+        content: content,  
+    };
+
 
     const editNote = async (e) => {
         e.preventDefault();
-        api.put(`/api/notes/edit/${note_id}/`)
+        api.put(`/api/notes/edit/${note_id}/`, updatedNote)
             .then((res) => {
-                if (res.status === 204) {
+                console.log(res.status);
+                if (res.status === 200) {
                     console.log("Note updated successfully!");
                     navigate('/');
                 } else {
